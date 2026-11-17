@@ -1,0 +1,66 @@
+
+{
+    "nombre": "Videojuegos",
+    "preguntas": [
+        {
+            "enunciado": "¿Qué empresa creó Minecraft?",
+            "respuestas": ["Nintendo", "Mojang", "Ubisoft", "Valve"],
+            "respuestaCorrecta": 1,
+            "duracion": 15
+        },
+        {
+            "enunciado": "¿En qué año salió Minecraft?",
+            "respuestas": ["2009", "2010", "2011", "2012"],
+            "respuestaCorrecta": 0,
+            "duracion": 15
+        },
+        {
+            "enunciado": "¿Cómo se llama el protagonista de The Legend of Zelda?",
+            "respuestas": ["Zelda", "Ganon", "Link", "Epona"],
+            "respuestaCorrecta": 2,
+            "duracion": 15
+        },
+        {
+            "enunciado": "¿Qué empresa desarrolló God of War (2018)?",
+            "respuestas": ["Santa Monica Studio", "Naughty Dog", "Capcom", "Insomniac Games"],
+            "respuestaCorrecta": 0,
+            "duracion": 15
+        },
+        {
+            "enunciado": "¿Cuál es la mascota de SEGA?",
+            "respuestas": ["Mario", "Sonic", "Crash", "Kirby"],
+            "respuestaCorrecta": 1,
+            "duracion": 15
+        },
+        {
+            "enunciado": "¿Qué tipo de juego es League of Legends?",
+            "respuestas": ["FPS", "RPG", "MOBA", "Simulador"],
+            "respuestaCorrecta": 2,
+            "duracion": 15
+        },
+        {
+            "enunciado": "¿Qué compañía creó la saga Pokémon?",
+            "respuestas": ["Game Freak", "Square Enix", "EA", "Rockstar"],
+            "respuestaCorrecta": 0,
+            "duracion": 15
+        },
+        {
+            "enunciado": "¿En qué saga aparece el personaje Master Chief?",
+            "respuestas": ["Gears of War", "Halo", "Doom", "Destiny"],
+            "respuestaCorrecta": 1,
+            "duracion": 15
+        },
+        {
+            "enunciado": "¿Qué personaje es el protagonista de God of War?",
+            "respuestas": ["Dante", "Kratos", "Geralt", "Arthur Morgan"],
+            "respuestaCorrecta": 1,
+            "duracion": 15
+        },
+        {
+            "enunciado": "¿Qué empresa desarrolló The Witcher 3?",
+            "respuestas": ["Bethesda", "CD Projekt Red", "FromSoftware", "Rockstar Games"],
+            "respuestaCorrecta": 1,
+            "duracion": 15
+        }
+    ]
+}

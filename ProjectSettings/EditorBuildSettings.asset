@@ -5,9 +5,33 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Main Scene.unity
+    guid: ff6a48c4c0431f64dae9abf31dc4f0b4
+  - enabled: 1
+    path: Assets/Scenes/Selecionar Kahoot.unity
+    guid: 773ad3cc860bd094490e847859946801
+  - enabled: 1
+    path: Assets/Scenes/Leaderboard.unity
+    guid: bd72615a67c287149bec665be067e248
+  - enabled: 1
+    path: Assets/Scenes/Jugar.unity
+    guid: 789ab1c7047096444b11f23fc5e28235
+  - enabled: 1
+    path: Assets/Scenes/Juego.unity
+    guid: 412f1c44b5229424c8287eada0b812fe
+  - enabled: 1
+    path: Assets/Scenes/Crear Kahoot.unity
+    guid: 57b85182d8b1cb44ea9baf83e00f60cd
+  - enabled: 1
+    path: Assets/Scenes/Archivo Usuario.unity
+    guid: f9936d407cc72cc4990a4e4a6ea92a05
+  - enabled: 1
+    path: Assets/Scenes/About.unity
+    guid: e255ad510fbe07243919c884eefaf781
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
