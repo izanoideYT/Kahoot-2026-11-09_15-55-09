@@ -24,6 +24,22 @@ public class ControladorLeaderboard : MonoBehaviour
         panelLeaderboard.SetActive(false);
         CargarKahoots();
     }
+    public void Atras()
+    {
+        panelLeaderboard.SetActive(false);
+    }
+
+    public void Volver()
+    {
+        if (GestorNavegacion.EscenaAnteriorLeaderboard == "Jugar-Partida")
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Jugar");
+        }
+        else
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Main Scene");
+        }
+    }
 
     private void CargarKahoots()
     {
@@ -108,4 +124,8 @@ public class ControladorLeaderboard : MonoBehaviour
 
         Debug.Log("Leaderboard cargado: " + nombreKahoot);
     }
+
+
+
+
 }

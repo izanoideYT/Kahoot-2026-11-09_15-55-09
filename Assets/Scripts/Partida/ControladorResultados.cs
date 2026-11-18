@@ -62,6 +62,7 @@ public class ControladorResultados : MonoBehaviour
 
     private void VerLeaderboard()
     {
+        GestorNavegacion.EstablecerOrigenLeaderboard("Jugar");
         SceneManager.LoadScene("Leaderboard");
     }
 

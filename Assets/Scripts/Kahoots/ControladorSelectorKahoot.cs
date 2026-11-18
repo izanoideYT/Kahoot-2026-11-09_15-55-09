@@ -49,4 +49,9 @@ public class ControladorSelectorKahoot : MonoBehaviour
         SceneManager.LoadScene("Juego");
     }
 
+    public void AbrirCrearKahoot()
+    {
+        SceneManager.LoadScene("Crear Kahoot");
+    }
+
 }

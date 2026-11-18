@@ -76,4 +76,58 @@ public static class GestorKahoots
 
         return kahoots;
     }
+
+    public static bool GuardarKahoot(Kahoot kahoot)
+    {
+        try
+        {
+            if (kahoot == null ||
+                string.IsNullOrWhiteSpace(kahoot.nombre) ||
+                kahoot.preguntas == null ||
+                kahoot.preguntas.Count == 0)
+            {
+                Debug.LogWarning("El Kahoot no contiene datos válidos.");
+                return false;
+            }
+
+            Directory.CreateDirectory(GestorArchivos.RutaKahoots);
+
+            string nombreArchivo = kahoot.nombre.Trim();
+
+            foreach (char caracter in Path.GetInvalidFileNameChars())
+            {
+                nombreArchivo = nombreArchivo.Replace(caracter, '_');
+            }
+
+            string ruta = Path.Combine(
+                GestorArchivos.RutaKahoots,
+                nombreArchivo + ".json"
+            );
+
+            if (File.Exists(ruta))
+            {
+                Debug.LogWarning("Ya existe un Kahoot con ese nombre.");
+                return false;
+            }
+
+            string json = JsonUtility.ToJson(kahoot, true);
+
+            File.WriteAllText(ruta, json);
+
+            Debug.Log("Kahoot guardado correctamente: " + ruta);
+
+            return true;
+        }
+        catch (Exception error)
+        {
+            GestorExcepciones.RegistrarError(
+                "Error al guardar el Kahoot: " + kahoot.nombre,
+                error
+            );
+
+            return false;
+        }
+    }
+
+
 }
