@@ -35,10 +35,34 @@ public class ControladorSelectorKahoot : MonoBehaviour
                 .Find("Button Jugar")
                 .GetComponent<Button>();
 
-            botonJugar.onClick.AddListener(() => SeleccionarKahoot(kahoot));
+            botonJugar.onClick.AddListener(
+                () => SeleccionarKahoot(kahoot)
+            );
+
+            Button botonModificar = tarjeta.transform
+                .Find("Button Modificar")
+                .GetComponent<Button>();
+
+            botonModificar.onClick.AddListener(
+                () => ModificarKahoot(kahoot)
+            );
+
+            Button botonEliminar = tarjeta.transform
+                    .Find("Button Eliminar")
+                       .GetComponent<Button>();
+
+            botonEliminar.onClick.AddListener(
+                () => EliminarKahoot(kahoot, tarjeta)
+            );
         }
     }
-
+    private void EliminarKahoot(Kahoot kahoot, GameObject tarjeta)
+    {
+        if (GestorKahoots.EliminarKahoot(kahoot))
+        {
+            Destroy(tarjeta);
+        }
+    }
 
     private void SeleccionarKahoot(Kahoot kahoot)
     {
@@ -49,9 +73,16 @@ public class ControladorSelectorKahoot : MonoBehaviour
         SceneManager.LoadScene("Juego");
     }
 
+    private void ModificarKahoot(Kahoot kahoot)
+    {
+        if (!GestorKahoots.PrepararEdicion(kahoot))
+            return;
+
+        SceneManager.LoadScene("Crear Kahoot");
+    }
+
     public void AbrirCrearKahoot()
     {
         SceneManager.LoadScene("Crear Kahoot");
     }
-
 }

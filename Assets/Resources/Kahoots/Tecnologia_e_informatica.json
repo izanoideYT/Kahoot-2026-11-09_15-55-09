@@ -1,0 +1,115 @@
+{
+    "nombre": "Tecnologia e informatica",
+    "preguntas": [
+        {
+            "enunciado": "¿Qué significan las siglas CPU?",
+            "respuestas": [
+                "Central Processing Unit",
+                "Computer Personal Utility",
+                "Control Program User",
+                "Central Power Usage"
+            ],
+            "respuestaCorrecta": 0,
+            "duracion": 20.0
+        },
+        {
+            "enunciado": "¿Cuál de estos es un lenguaje de programación?",
+            "respuestas": [
+                "HTML",
+                "CSS",
+                "Python",
+                "JPEG"
+            ],
+            "respuestaCorrecta": 2,
+            "duracion": 20.0
+        },
+        {
+            "enunciado": "¿Qué componente almacena datos de forma permanente?",
+            "respuestas": [
+                "RAM",
+                "SSD",
+                "CPU",
+                "GPU"
+            ],
+            "respuestaCorrecta": 1,
+            "duracion": 20.0
+        },
+        {
+            "enunciado": "¿Qué significa la dirección IP?",
+            "respuestas": [
+                "Internet Protocol",
+                "Internal Program",
+                "Input Process",
+                "Integrated Port"
+            ],
+            "respuestaCorrecta": 0,
+            "duracion": 20.0
+        },
+        {
+            "enunciado": "¿Cuál es la función principal de la memoria RAM?",
+            "respuestas": [
+                "Guardar archivos para siempre",
+                "Almacenar datos temporales en uso",
+                "Mostrar imágenes",
+                "Conectar el ordenador a Internet"
+            ],
+            "respuestaCorrecta": 1,
+            "duracion": 20.0
+        },
+        {
+            "enunciado": "¿Qué empresa desarrolla Windows?",
+            "respuestas": [
+                "Apple",
+                "Google",
+                "Microsoft",
+                "IBM"
+            ],
+            "respuestaCorrecta": 2,
+            "duracion": 20.0
+        },
+        {
+            "enunciado": "¿Qué es Git?",
+            "respuestas": [
+                "Un sistema de control de versiones",
+                "Un lenguaje de marcado",
+                "Un navegador",
+                "Un tipo de procesador"
+            ],
+            "respuestaCorrecta": 0,
+            "duracion": 20.0
+        },
+        {
+            "enunciado": "¿Qué unidad suele medir la capacidad de almacenamiento?",
+            "respuestas": [
+                "Hertz",
+                "Byte",
+                "Voltio",
+                "Píxel"
+            ],
+            "respuestaCorrecta": 1,
+            "duracion": 20.0
+        },
+        {
+            "enunciado": "¿Para qué sirve una GPU?",
+            "respuestas": [
+                "Gestionar principalmente gráficos y cálculos paralelos",
+                "Refrigerar el equipo",
+                "Almacenar contraseñas",
+                "Conectar periféricos por Bluetooth"
+            ],
+            "respuestaCorrecta": 0,
+            "duracion": 20.0
+        },
+        {
+            "enunciado": "¿Qué protocolo se utiliza habitualmente para navegar por webs seguras?",
+            "respuestas": [
+                "FTP",
+                "HTTP sin cifrar",
+                "HTTPS",
+                "SMTP"
+            ],
+            "respuestaCorrecta": 2,
+            "duracion": 20.0
+        }
+    ]
+}

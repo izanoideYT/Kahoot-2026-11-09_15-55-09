@@ -1,0 +1,115 @@
+{
+    "nombre": "Cultura general",
+    "preguntas": [
+        {
+            "enunciado": "¿Cuál es la capital de Australia?",
+            "respuestas": [
+                "Sídney",
+                "Canberra",
+                "Melbourne",
+                "Perth"
+            ],
+            "respuestaCorrecta": 1,
+            "duracion": 20.0
+        },
+        {
+            "enunciado": "¿Cuántos lados tiene un hexágono?",
+            "respuestas": [
+                "Cinco",
+                "Seis",
+                "Siete",
+                "Ocho"
+            ],
+            "respuestaCorrecta": 1,
+            "duracion": 20.0
+        },
+        {
+            "enunciado": "¿En qué continente está Egipto?",
+            "respuestas": [
+                "Asia",
+                "Europa",
+                "África",
+                "Oceanía"
+            ],
+            "respuestaCorrecta": 2,
+            "duracion": 20.0
+        },
+        {
+            "enunciado": "¿Quién pintó la Mona Lisa?",
+            "respuestas": [
+                "Vincent van Gogh",
+                "Pablo Picasso",
+                "Leonardo da Vinci",
+                "Claude Monet"
+            ],
+            "respuestaCorrecta": 2,
+            "duracion": 20.0
+        },
+        {
+            "enunciado": "¿Cuál es el océano más grande?",
+            "respuestas": [
+                "Atlántico",
+                "Índico",
+                "Ártico",
+                "Pacífico"
+            ],
+            "respuestaCorrecta": 3,
+            "duracion": 20.0
+        },
+        {
+            "enunciado": "¿Cuántos minutos tiene una hora y media?",
+            "respuestas": [
+                "60",
+                "75",
+                "90",
+                "120"
+            ],
+            "respuestaCorrecta": 2,
+            "duracion": 20.0
+        },
+        {
+            "enunciado": "¿Cuál es la moneda oficial de Japón?",
+            "respuestas": [
+                "Yuan",
+                "Won",
+                "Yen",
+                "Dólar"
+            ],
+            "respuestaCorrecta": 2,
+            "duracion": 20.0
+        },
+        {
+            "enunciado": "¿Qué idioma tiene más hablantes nativos?",
+            "respuestas": [
+                "Inglés",
+                "Español",
+                "Chino mandarín",
+                "Francés"
+            ],
+            "respuestaCorrecta": 2,
+            "duracion": 20.0
+        },
+        {
+            "enunciado": "¿En qué país se encuentra la Torre de Pisa?",
+            "respuestas": [
+                "Grecia",
+                "Italia",
+                "Francia",
+                "Portugal"
+            ],
+            "respuestaCorrecta": 1,
+            "duracion": 20.0
+        },
+        {
+            "enunciado": "¿Qué instrumento mide la temperatura?",
+            "respuestas": [
+                "Barómetro",
+                "Termómetro",
+                "Higrómetro",
+                "Anemómetro"
+            ],
+            "respuestaCorrecta": 1,
+            "duracion": 20.0
+        }
+    ]
+}

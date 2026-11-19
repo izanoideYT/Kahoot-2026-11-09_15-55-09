@@ -1,0 +1,115 @@
+{
+    "nombre": "Cine y series",
+    "preguntas": [
+        {
+            "enunciado": "¿Cómo se llama la escuela de magia de Harry Potter?",
+            "respuestas": [
+                "Narnia",
+                "Hogwarts",
+                "Camelot",
+                "Nevermore"
+            ],
+            "respuestaCorrecta": 1,
+            "duracion": 20.0
+        },
+        {
+            "enunciado": "¿En qué saga aparece el personaje Darth Vader?",
+            "respuestas": [
+                "Star Trek",
+                "Star Wars",
+                "Dune",
+                "Matrix"
+            ],
+            "respuestaCorrecta": 1,
+            "duracion": 20.0
+        },
+        {
+            "enunciado": "¿Cómo se llama el vaquero de Toy Story?",
+            "respuestas": [
+                "Buzz",
+                "Woody",
+                "Rex",
+                "Andy"
+            ],
+            "respuestaCorrecta": 1,
+            "duracion": 20.0
+        },
+        {
+            "enunciado": "¿Qué familia protagoniza Los Simpson?",
+            "respuestas": [
+                "Los Griffin",
+                "Los Smith",
+                "Los Simpson",
+                "Los Mitchell"
+            ],
+            "respuestaCorrecta": 2,
+            "duracion": 20.0
+        },
+        {
+            "enunciado": "¿En qué película aparece el reino de Wakanda?",
+            "respuestas": [
+                "Iron Man",
+                "Black Panther",
+                "Thor",
+                "Ant-Man"
+            ],
+            "respuestaCorrecta": 1,
+            "duracion": 20.0
+        },
+        {
+            "enunciado": "¿Cómo se llama el ogro verde de DreamWorks?",
+            "respuestas": [
+                "Shrek",
+                "Hulk",
+                "Sulley",
+                "Gru"
+            ],
+            "respuestaCorrecta": 0,
+            "duracion": 20.0
+        },
+        {
+            "enunciado": "¿Qué personaje dice habitualmente 'Yo soy tu padre' en Star Wars?",
+            "respuestas": [
+                "Obi-Wan Kenobi",
+                "Luke Skywalker",
+                "Darth Vader",
+                "Han Solo"
+            ],
+            "respuestaCorrecta": 2,
+            "duracion": 20.0
+        },
+        {
+            "enunciado": "¿En qué serie aparecen los personajes Eleven y Mike?",
+            "respuestas": [
+                "The Last of Us",
+                "Stranger Things",
+                "Dark",
+                "Wednesday"
+            ],
+            "respuestaCorrecta": 1,
+            "duracion": 20.0
+        },
+        {
+            "enunciado": "¿Qué animal es Po en Kung Fu Panda?",
+            "respuestas": [
+                "Tigre",
+                "Mono",
+                "Oso panda",
+                "Grulla"
+            ],
+            "respuestaCorrecta": 2,
+            "duracion": 20.0
+        },
+        {
+            "enunciado": "¿Cómo se llama el reino helado de la película Frozen?",
+            "respuestas": [
+                "Arendelle",
+                "Gotham",
+                "Zootrópolis",
+                "Agrabah"
+            ],
+            "respuestaCorrecta": 0,
+            "duracion": 20.0
+        }
+    ]
+}

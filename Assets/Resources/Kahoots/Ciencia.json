@@ -1,0 +1,115 @@
+{
+    "nombre": "Ciencia",
+    "preguntas": [
+        {
+            "enunciado": "¿Qué planeta es conocido como el planeta rojo?",
+            "respuestas": [
+                "Venus",
+                "Marte",
+                "Júpiter",
+                "Mercurio"
+            ],
+            "respuestaCorrecta": 1,
+            "duracion": 20.0
+        },
+        {
+            "enunciado": "¿Cuál es el símbolo químico del agua?",
+            "respuestas": [
+                "CO2",
+                "O2",
+                "H2O",
+                "NaCl"
+            ],
+            "respuestaCorrecta": 2,
+            "duracion": 20.0
+        },
+        {
+            "enunciado": "¿Qué órgano bombea la sangre?",
+            "respuestas": [
+                "Pulmón",
+                "Cerebro",
+                "Hígado",
+                "Corazón"
+            ],
+            "respuestaCorrecta": 3,
+            "duracion": 20.0
+        },
+        {
+            "enunciado": "¿Cuál es la estrella más cercana a la Tierra?",
+            "respuestas": [
+                "Sirio",
+                "El Sol",
+                "Próxima Centauri",
+                "Vega"
+            ],
+            "respuestaCorrecta": 1,
+            "duracion": 20.0
+        },
+        {
+            "enunciado": "¿Qué fuerza nos mantiene sobre la superficie terrestre?",
+            "respuestas": [
+                "Magnetismo",
+                "Fricción",
+                "Gravedad",
+                "Electricidad"
+            ],
+            "respuestaCorrecta": 2,
+            "duracion": 20.0
+        },
+        {
+            "enunciado": "¿Qué gas absorben principalmente las plantas durante la fotosíntesis?",
+            "respuestas": [
+                "Oxígeno",
+                "Dióxido de carbono",
+                "Nitrógeno",
+                "Hidrógeno"
+            ],
+            "respuestaCorrecta": 1,
+            "duracion": 20.0
+        },
+        {
+            "enunciado": "¿Cuántos huesos tiene normalmente un adulto?",
+            "respuestas": [
+                "106",
+                "206",
+                "306",
+                "406"
+            ],
+            "respuestaCorrecta": 1,
+            "duracion": 20.0
+        },
+        {
+            "enunciado": "¿Cuál es la unidad de medida de la corriente eléctrica?",
+            "respuestas": [
+                "Amperio",
+                "Vatio",
+                "Ohmio",
+                "Julio"
+            ],
+            "respuestaCorrecta": 0,
+            "duracion": 20.0
+        },
+        {
+            "enunciado": "¿Qué parte de la célula contiene gran parte del material genético?",
+            "respuestas": [
+                "Membrana",
+                "Citoplasma",
+                "Núcleo",
+                "Ribosoma"
+            ],
+            "respuestaCorrecta": 2,
+            "duracion": 20.0
+        },
+        {
+            "enunciado": "¿A qué temperatura hierve el agua al nivel del mar?",
+            "respuestas": [
+                "50 °C",
+                "75 °C",
+                "100 °C",
+                "150 °C"
+            ],
+            "respuestaCorrecta": 2,
+            "duracion": 20.0
+        }
+    ]
+}

@@ -1,8 +1,10 @@
 
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class ControladorCrearKahoot : MonoBehaviour
 {
@@ -18,12 +20,62 @@ public class ControladorCrearKahoot : MonoBehaviour
     public Button botonAnadirPregunta;
     public Button botonGuardarKahoot;
 
+    private Kahoot kahootEnEdicion;
+
     private void Start()
     {
         botonAnadirPregunta.onClick.AddListener(AnadirPregunta);
         botonGuardarKahoot.onClick.AddListener(GuardarKahoot);
 
-        AnadirPregunta();
+        if (!string.IsNullOrEmpty(GestorKahoots.RutaKahootEnEdicion))
+        {
+            CargarKahootExistente();
+        }
+        else
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                AnadirPregunta();
+            }
+        }
+    }
+
+    private void CargarKahootExistente()
+    {
+        string ruta = GestorKahoots.RutaKahootEnEdicion;
+
+        if (!File.Exists(ruta))
+        {
+            Debug.LogError("No se encuentra el archivo del Kahoot.");
+            return;
+        }
+
+        string contenido = File.ReadAllText(ruta);
+
+        kahootEnEdicion = JsonUtility.FromJson<Kahoot>(contenido);
+
+        if (kahootEnEdicion == null ||
+            kahootEnEdicion.preguntas == null ||
+            kahootEnEdicion.preguntas.Count == 0)
+        {
+            Debug.LogError("El Kahoot no contiene datos válidos.");
+            return;
+        }
+
+        inputNombreKahoot.text = kahootEnEdicion.nombre;
+
+        inputDuracionPregunta.text =
+            kahootEnEdicion.preguntas[0].duracion.ToString();
+
+        foreach (Pregunta pregunta in kahootEnEdicion.preguntas)
+        {
+            GameObject nuevaPregunta = CrearTarjetaPregunta();
+
+            ControladorPreguntaUI controlador =
+                nuevaPregunta.GetComponent<ControladorPreguntaUI>();
+
+            controlador.CargarPregunta(pregunta);
+        }
     }
 
     public void AnadirPregunta()
@@ -34,7 +86,33 @@ public class ControladorCrearKahoot : MonoBehaviour
             return;
         }
 
-        Instantiate(prefabPregunta, contenidoPreguntas);
+        CrearTarjetaPregunta();
+    }
+
+    private GameObject CrearTarjetaPregunta()
+    {
+        GameObject nuevaPregunta = Instantiate(
+            prefabPregunta,
+            contenidoPreguntas
+        );
+
+        ControladorPreguntaUI controlador =
+            nuevaPregunta.GetComponent<ControladorPreguntaUI>();
+
+        if (controlador == null)
+        {
+            Debug.LogError("El prefab no tiene ControladorPreguntaUI.");
+            return nuevaPregunta;
+        }
+
+        controlador.ConfigurarBotonEliminar(EliminarPregunta);
+
+        return nuevaPregunta;
+    }
+
+    private void EliminarPregunta(ControladorPreguntaUI pregunta)
+    {
+        Destroy(pregunta.gameObject);
     }
 
     private void GuardarKahoot()
@@ -82,15 +160,26 @@ public class ControladorCrearKahoot : MonoBehaviour
         }
 
         Kahoot nuevoKahoot = new Kahoot();
+
         nuevoKahoot.nombre = nombre;
         nuevoKahoot.preguntas = preguntas;
 
-        bool guardado = GestorKahoots.GuardarKahoot(nuevoKahoot);
+        bool guardado;
+
+        if (!string.IsNullOrEmpty(GestorKahoots.RutaKahootEnEdicion))
+        {
+            guardado = GestorKahoots.ActualizarKahoot(nuevoKahoot);
+        }
+        else
+        {
+            guardado = GestorKahoots.GuardarKahoot(nuevoKahoot);
+        }
 
         if (guardado)
         {
             Debug.Log("Kahoot guardado correctamente.");
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Selecionar Kahoot");
+
+            SceneManager.LoadScene("Selecionar Kahoot");
         }
     }
 }
