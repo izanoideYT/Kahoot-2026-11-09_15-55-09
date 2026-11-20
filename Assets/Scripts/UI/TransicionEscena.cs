@@ -11,6 +11,7 @@ public class TransicionEscena : MonoBehaviour
     public float duracion = 0.8f;
 
     private bool enTransicion = false;
+    private int escenaAnterior = -1;
 
     private void Awake()
     {
@@ -25,6 +26,7 @@ public class TransicionEscena : MonoBehaviour
         }
     }
 
+    // CAMBIO DE ESCENA CON ANIMACION
     public void CambiarEscena(string nombreEscena, RectTransform boton)
     {
         if (enTransicion || boton == null)
@@ -37,7 +39,6 @@ public class TransicionEscena : MonoBehaviour
 
     private IEnumerator AnimarTransicion(string nombreEscena, RectTransform boton)
     {
-        // Colocamos el boton por delante de sus hermanos
         boton.SetAsLastSibling();
 
         Canvas canvas = boton.GetComponentInParent<Canvas>();
@@ -71,9 +72,53 @@ public class TransicionEscena : MonoBehaviour
             yield return null;
         }
 
-        SceneManager.LoadScene(nombreEscena);
+        escenaAnterior = SceneManager.GetActiveScene().buildIndex;
 
-        // Permitimos iniciar nuevas transiciones en la siguiente escena
+        SceneManager.LoadScene(nombreEscena);
+    }
+
+    // CAMBIO DE ESCENA SIN ANIMACION
+    public void CambiarEscenaDirecta(string nombreEscena)
+    {
+        if (enTransicion)
+            return;
+
+        enTransicion = true;
+
+        escenaAnterior = SceneManager.GetActiveScene().buildIndex;
+
+        SceneManager.LoadScene(nombreEscena);
+    }
+
+    // VOLVER A LA ESCENA ANTERIOR
+    public void Volver()
+    {
+        if (enTransicion || escenaAnterior == -1)
+            return;
+
+        enTransicion = true;
+
+        int destino = escenaAnterior;
+        escenaAnterior = -1;
+
+        Debug.Log("Escena anterior guardada: " + escenaAnterior);
+
+        SceneManager.LoadScene(destino);
+    }
+
+    // REACTIVAR NAVEGACION AL CARGAR UNA ESCENA
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += AlCargarEscena;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= AlCargarEscena;
+    }
+
+    private void AlCargarEscena(Scene escena, LoadSceneMode modo)
+    {
         enTransicion = false;
     }
 }

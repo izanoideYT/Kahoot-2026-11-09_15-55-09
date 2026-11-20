@@ -19,6 +19,12 @@ public class ControladorCrearKahoot : MonoBehaviour
     [Header("Botones")]
     public Button botonAnadirPregunta;
     public Button botonGuardarKahoot;
+    public Button botonVolver;
+
+    [Header("Confirmacion de salida")]
+    public GameObject panelConfirmarSalida;
+    public Button botonSeguirEditando;
+    public Button botonSalirSinGuardar;
 
     private Kahoot kahootEnEdicion;
 
@@ -26,6 +32,12 @@ public class ControladorCrearKahoot : MonoBehaviour
     {
         botonAnadirPregunta.onClick.AddListener(AnadirPregunta);
         botonGuardarKahoot.onClick.AddListener(GuardarKahoot);
+
+        botonVolver.onClick.AddListener(Volver);
+        botonSeguirEditando.onClick.AddListener(CerrarConfirmacion);
+        botonSalirSinGuardar.onClick.AddListener(SalirSinGuardar);
+
+        panelConfirmarSalida.SetActive(false);
 
         if (!string.IsNullOrEmpty(GestorKahoots.RutaKahootEnEdicion))
         {
@@ -179,7 +191,22 @@ public class ControladorCrearKahoot : MonoBehaviour
         {
             Debug.Log("Kahoot guardado correctamente.");
 
-            SceneManager.LoadScene("Selecionar Kahoot");
+            SceneManager.LoadScene("Selcionar Kahoot");
         }
+    }
+
+    public void Volver()
+    {
+        panelConfirmarSalida.SetActive(true);
+    }
+
+    private void CerrarConfirmacion()
+    {
+        panelConfirmarSalida.SetActive(false);
+    }
+
+    private void SalirSinGuardar()
+    {
+        SceneManager.LoadScene("Selecionar Kahoot");
     }
 }

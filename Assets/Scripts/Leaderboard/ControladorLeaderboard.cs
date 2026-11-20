@@ -104,7 +104,18 @@ public class ControladorLeaderboard : MonoBehaviour
                 switch (texto.name)
                 {
                     case "Text Posicion":
+
                         texto.text = (i + 1).ToString();
+
+                        if (i == 0)
+                            texto.color = new Color32(255, 215, 0, 255); 
+                        else if (i == 1)
+                            texto.color = new Color32(192, 192, 192, 255);
+                        else if (i == 2)
+                            texto.color = new Color32(205, 127, 50, 255); 
+                        else
+                            texto.color = new Color32(6, 214, 224, 255); 
+
                         break;
 
                     case "Text Nombre Usuario":

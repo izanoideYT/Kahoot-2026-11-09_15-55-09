@@ -1,9 +1,9 @@
 
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ControladorSelectorUsuario : MonoBehaviour
 {
@@ -87,7 +87,15 @@ public class ControladorSelectorUsuario : MonoBehaviour
     private void Jugar(Usuario usuario)
     {
         GestorUsuarios.SeleccionarUsuario(usuario);
-        SceneManager.LoadScene("Selecionar Kahoot");
+
+        if (TransicionEscena.Instancia != null)
+        {
+            TransicionEscena.Instancia.CambiarEscenaDirecta("Selecionar Kahoot");
+        }
+        else
+        {
+            Debug.LogError("No se ha encontrado TransicionEscena.");
+        }
     }
 
     private void CrearUsuario()
@@ -151,6 +159,7 @@ public class ControladorSelectorUsuario : MonoBehaviour
 
     public void Volver()
     {
+        Debug.Log("Volviendo al menú principal...");
         SceneManager.LoadScene("Main Scene");
     }
 }

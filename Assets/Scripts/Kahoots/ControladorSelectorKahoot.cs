@@ -85,4 +85,12 @@ public class ControladorSelectorKahoot : MonoBehaviour
     {
         SceneManager.LoadScene("Crear Kahoot");
     }
+
+    public void Volver()
+    {
+        Debug.Log("Volviendo a Archivo usuario...");
+
+        SceneManager.LoadScene("Archivo usuario");
+    }
 }
+
