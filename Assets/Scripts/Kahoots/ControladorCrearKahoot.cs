@@ -191,7 +191,7 @@ public class ControladorCrearKahoot : MonoBehaviour
         {
             Debug.Log("Kahoot guardado correctamente.");
 
-            SceneManager.LoadScene("Selcionar Kahoot");
+            SceneManager.LoadScene("Selecionar Kahoot");
         }
     }
 

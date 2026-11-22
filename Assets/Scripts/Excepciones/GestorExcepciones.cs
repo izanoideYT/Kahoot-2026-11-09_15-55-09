@@ -27,4 +27,25 @@ public static class GestorExcepciones
         }
 
     }
+
+    public static int ObtenerCantidadErrores()
+    {
+        try
+        {
+            if (!Directory.Exists(GestorArchivos.RutaErrorLogs))
+                return 0;
+
+            string[] archivos = Directory.GetFiles(
+                GestorArchivos.RutaErrorLogs,
+                "Error_*.txt"
+            );
+
+            return archivos.Length;
+        }
+        catch (Exception error)
+        {
+            Debug.LogError("Error al consultar los registros: " + error.Message);
+            return 0;
+        }
+    }
 }
