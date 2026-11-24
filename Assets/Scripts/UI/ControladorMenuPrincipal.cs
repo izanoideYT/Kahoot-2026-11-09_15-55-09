@@ -23,4 +23,9 @@ public class ControladorMenuPrincipal : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void AbrirErrorLogs()
+    {
+        SceneManager.LoadScene("ErrorLog");
+    }
 }
